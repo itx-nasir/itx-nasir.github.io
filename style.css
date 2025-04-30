@@ -461,46 +461,47 @@ section.home {
 }
 
 /* projects section styling */
-.projects .carousel .card{
+.projects .carousel .card {
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
-.projects .carousel .card .box p{
-    text-align: justify;
-}
-.projects .carousel .card:hover{
-    background: crimson;
-}
-.projects .carousel .card .box{
+
+.projects .carousel .card .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
 }
-.projects .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.projects .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.projects .carousel .card img{
+
+.projects .carousel .card img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid crimson;
+}
+
+/* Keep only the link hover effects */
+.projects .carousel .card .project-links a {
+    color: #fff;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
+    opacity: 0.8;
 }
-.projects .carousel .card:hover img{
-    border-color: #fff;
+
+.projects .carousel .card .project-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: crimson;
 }
+
+.projects .carousel .card:hover .project-links a {
+    color: #fff;
+}
+
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -521,31 +522,6 @@ section.home {
 .owl-dot.active,
 .owl-dot:hover{
     background: crimson!important;
-}
-
-/* Add these styles after line 485 */
-.projects .carousel .card .project-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: center;
-}
-
-.projects .carousel .card .project-links a {
-    color: #fff;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.projects .carousel .card .project-links a:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-    color: crimson;
-}
-
-.projects .carousel .card:hover .project-links a {
-    color: #fff;
 }
 
 /* contact section styling */
