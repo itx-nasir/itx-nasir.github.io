@@ -350,9 +350,9 @@ section .title::after{
 }
 .skills .skills-content .right .info{
     display: flex;
-    margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 .skills .skills-content .right span{
     font-weight: 500;
@@ -386,6 +386,21 @@ section .title::after{
 }
 .skills-content .right .cpp::before{
     width: 90%;
+}
+.skills-content .right .python::before{
+    width: 95%;
+}
+.skills-content .right .docker::before{
+    width: 90%;
+}
+.skills-content .right .cloud::before{
+    width: 85%;
+}
+.skills-content .right .database::before{
+    width: 90%;
+}
+.skills-content .right .ml::before{
+    width: 85%;
 }
 
 /* projects section styling */
@@ -696,5 +711,194 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+
+/* Experience section styling */
+.experience .title::after {
+    content: "where I've worked";
+}
+
+.exp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.exp-card {
+    background: #222;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.exp-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: crimson;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.exp-card:hover::before {
+    transform: scaleY(1);
+}
+
+.exp-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.exp-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.company-logo {
+    background: crimson;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.exp-info h3 {
+    font-size: 1.4rem;
+    color: crimson;
+    margin-bottom: 0.3rem;
+}
+
+.exp-info h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.duration {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.exp-details ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.exp-details li {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.exp-details li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: crimson;
+}
+
+@media (max-width: 768px) {
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .exp-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Achievements section styling */
+.achievements .title::after {
+    content: "recognition & awards";
+}
+
+.achievement-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: crimson;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.achievement-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background: crimson;
+    margin: 0 auto 1rem;
+}
+
+.achievement-icon i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.achievement-card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: crimson;
+}
+
+.achievement-card p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .achievement-content {
+        grid-template-columns: 1fr;
     }
 }
