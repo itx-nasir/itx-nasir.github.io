@@ -8,6 +8,17 @@
     --background-dark: #111;
     --background-light: #fff;
     --transition: all 0.3s ease;
+    --primary-bg: #111;
+    --secondary-bg: #222;
+    --text-primary: #fff;
+    --text-secondary: #ddd;
+}
+
+[data-theme="light"] {
+    --primary-bg: #fff;
+    --secondary-bg: #f5f5f5;
+    --text-primary: #333;
+    --text-secondary: #666;
 }
 
 *{
@@ -96,13 +107,24 @@ section .title{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
 }
 .navbar .logo a span{
     color: crimson;
     transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 .navbar.sticky .logo a span{
     color: #fff;
+}
+.navbar .logo a:hover span {
+    color: #fff;
+    transform: scale(1.1);
+    display: inline-block;
+}
+.navbar .logo a:hover {
+    text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
 }
 .navbar .menu li{
     list-style: none;
@@ -122,13 +144,31 @@ section .title{
 .navbar.sticky .menu li a:hover{
     color: #fff;
 }
-.tools{
+.tools {
     display: flex;
-    justify-content: space-between;
-    margin: 10px 0 0 0;
-    text-align: center;
-    font-size: smaller;
-    width: 250px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.tools li {
+    background: rgba(220, 20, 60, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.tools li:hover {
+    background: crimson;
+    transform: translateY(-2px);
+}
+
+.tools li:first-child {
+    margin-left: 0 !important;
 }
 
 /* menu btn styling */
@@ -245,7 +285,7 @@ section.home {
 
 /* about section styling */
 .about {
-    background: #222;
+    background: #000000;
     color: var(--text-color);
 }
 
@@ -481,6 +521,31 @@ section.home {
 .owl-dot.active,
 .owl-dot:hover{
     background: crimson!important;
+}
+
+/* Add these styles after line 485 */
+.projects .carousel .card .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.projects .carousel .card .project-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.projects .carousel .card .project-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: crimson;
+}
+
+.projects .carousel .card:hover .project-links a {
+    color: #fff;
 }
 
 /* contact section styling */
