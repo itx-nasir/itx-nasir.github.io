@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Python Backend Developer", "Microservices Engineer", "Cloud Solutions Architect", "ML Engineer", "API Developer"],
+        strings: ["Python Backend Developer", "Cloud Engineer", "ML Engineer", "API Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Computer Scientist", "Python Developer", "Java Developer", "Machine Learning Engineer", "Freelancer"],
+        strings: ["Backend Developer", "Cloud Engineer", "ML Engineer", "Software Architect"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -69,5 +69,13 @@ $(document).ready(function(){
                 nav: false
             }
         }
+    });
+
+    // Add smooth scroll reveal
+    ScrollReveal().reveal('.card-common', {
+        delay: 200,
+        distance: '20px',
+        origin: 'bottom',
+        interval: 100
     });
 });
